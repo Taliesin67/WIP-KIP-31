@@ -1,14 +1,18 @@
 {
-  "name": "kip-31-testing",
+  "name": "kip-31-core-modules",
   "version": "1.0.0",
-  "description": "KIP-31 Project Test Suite",
+  "description": "KIP-31 Core Modules Test Suite",
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
   "keywords": ["testing", "jest", "kip-31"],
   "author": "",
   "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.11"
+  }
 }
