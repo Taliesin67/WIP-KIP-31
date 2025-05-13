@@ -4,17 +4,22 @@
   "description": "Core testing suite for KIP-31 project",
   "type": "module",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
-    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
+    "test:coverage": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["testing", "jest", "kip31"],
   "devDependencies": {
     "jest": "^29.7.0",
+    "@jest/globals": "^29.7.0",
     "@types/jest": "^29.5.11"
   },
   "jest": {
-    "transform": {},
     "testEnvironment": "node",
+    "transform": {},
     "extensionsToTreatAsEsm": [".js"],
     "moduleNameMapper": {
       "^(\\.{1,2}/.*)\\.js$": "$1"
