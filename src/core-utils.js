@@ -1,21 +1,30 @@
 // Core Utilities Module
 export class CoreUtilities {
-  constructor() {
-    // Initialize core utilities
-    this.version = '1.0.0';
+  constructor(initialVersion = '1.0.0') {
+    this.version = initialVersion;
   }
 
-  // Placeholder method for testing
+  // Robust method for testing
+  getVersion() {
+    return this.version;
+  }
+
+  // Simulate a utility method
+  performOperation(input) {
+    if (input === undefined) {
+      throw new Error('Input is required');
+    }
+    return input.toString().toUpperCase();
+  }
+
+  // Error handling test method
   potentialRiskyOperation() {
     try {
       // Simulate a potential operation
       return true;
     } catch (error) {
-      // Graceful error handling
       console.error('Operation failed:', error);
       return false;
     }
   }
-
-  // Additional utility methods will be added as the project evolves
 }
