@@ -1,5 +1,5 @@
 // Core Utilities Module
-class CoreUtilities {
+export class CoreUtilities {
   constructor() {
     // Initialize core utilities
     this.version = '1.0.0';
