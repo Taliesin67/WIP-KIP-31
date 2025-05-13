@@ -1,0 +1,12 @@
+{
+  "name": "kip-31-testing",
+  "version": "1.0.0",
+  "description": "Jest Testing Framework for KIP-31",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.11"
+  }
+}
