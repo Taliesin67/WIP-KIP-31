@@ -1,2 +1,8 @@
 #!/bin/bash
-npx jest tests/core
+set -e
+
+# Ensure dependencies are installed
+npm install
+
+# Run Jest tests
+npm test
