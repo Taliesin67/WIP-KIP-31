@@ -1,0 +1,17 @@
+{
+  "name": "kip31-core-testing",
+  "version": "1.0.0",
+  "description": "Core testing suite for KIP-31 project",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:core": "jest tests/core"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "configFile": "./jest.config.js"
+  }
+}
