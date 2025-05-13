@@ -1,5 +1,21 @@
+# Dependency directories
 node_modules/
+
+# Jest
 coverage/
-.jest-cache/
+.jest/
+
+# Logs
 *.log
+
+# Environment files
 .env
+
+# macOS system files
+.DS_Store
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
