@@ -1,30 +1,28 @@
-# Core Module Testing Setup
+# Core Module Testing
 
-## Prerequisites
-- Node.js (v14+ recommended)
-- npm or pnpm
-
-## Initial Setup
-1. Install dependencies:
+## Setup Instructions
+1. Ensure Node.js is installed (version 18+ recommended)
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-2. Run tests:
-   ```bash
-   npm test
-   ```
+## Running Tests
+- Run all tests: 
+  ```bash
+  npm test
+  ```
+- Watch mode: 
+  ```bash
+  npm run test:watch
+  ```
+- Generate coverage report: 
+  ```bash
+  npm run test:coverage
+  ```
 
 ## Testing Strategy
-- Located in `tests/core/`
-- Uses Jest as testing framework
-- Focuses on unit and integration testing for core modules
-
-## Coverage
-- Minimum coverage threshold: 80%
-- Detailed coverage reports generated after test runs
-
-## Troubleshooting
-- Ensure Node.js and npm are correctly installed
-- Check that all dependencies are installed
-- Verify Jest configuration in `jest.config.js`
+- Uses Jest testing framework
+- 100% coverage goal
+- Modular and comprehensive test suites
+- Supports ES modules
