@@ -1,22 +1,46 @@
-const { describe, expect, test } = require('@jest/globals');
+import { describe, expect, test } from '@jest/globals';
 
-// Sample core module test suite
-describe('Core Module Basic Tests', () => {
-  test('Basic module sanity check', () => {
-    expect(true).toBe(true);
+// Sample core module
+class CoreModule {
+  constructor() {
+    this.initialized = false;
+  }
+
+  init() {
+    this.initialized = true;
+    return true;
+  }
+
+  isReady() {
+    return this.initialized;
+  }
+}
+
+describe('Core Module Test Suite', () => {
+  test('Module initialization', () => {
+    const module = new CoreModule();
+    
+    // Initial state
+    expect(module.isReady()).toBe(false);
+    
+    // Initialization
+    const initResult = module.init();
+    expect(initResult).toBe(true);
+    
+    // Post-initialization state
+    expect(module.isReady()).toBe(true);
   });
 
-  // More comprehensive tests will be added as core modules are developed
-  test('Placeholder test for future implementation', () => {
-    const mockModule = {
-      initialized: false,
-      init() {
-        this.initialized = true;
-      }
-    };
-
-    expect(mockModule.initialized).toBe(false);
-    mockModule.init();
-    expect(mockModule.initialized).toBe(true);
+  test('Multiple initialization attempts', () => {
+    const module = new CoreModule();
+    
+    // First initialization
+    module.init();
+    expect(module.isReady()).toBe(true);
+    
+    // Subsequent re-initialization should maintain state
+    const reInitResult = module.init();
+    expect(reInitResult).toBe(true);
+    expect(module.isReady()).toBe(true);
   });
 });
