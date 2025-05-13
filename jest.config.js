@@ -1,6 +1,13 @@
-module.exports = {
+export default {
   // Test environment setup
   testEnvironment: 'node',
+  
+  // ESM support
+  transform: {},
+  extensionsToTreatAsEsm: ['.js'],
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1'
+  },
   
   // Coverage configuration
   collectCoverage: true,
