@@ -1,7 +1,5 @@
 // Core Utilities Test Suite
-
-// Import utilities to be tested (placeholder)
-const { CoreUtilities } = require('../src/core-utils');
+import { CoreUtilities } from '../src/core-utils.js';
 
 describe('Core Utilities', () => {
   // Test setup
@@ -14,19 +12,16 @@ describe('Core Utilities', () => {
   // Basic functional tests
   test('should initialize correctly', () => {
     expect(coreUtils).toBeDefined();
+    expect(coreUtils.version).toBe('1.0.0');
   });
 
-  // Add more specific tests as core modules are developed
+  // Basic operation test
   test('should handle basic operations', () => {
-    // Placeholder test
-    expect(true).toBeTruthy();
+    expect(coreUtils.potentialRiskyOperation()).toBe(true);
   });
 
   // Error handling test
-  test('should handle potential errors gracefully', () => {
-    expect(() => {
-      // Simulate potential error scenario
-      coreUtils.potentialRiskyOperation();
-    }).not.toThrow();
+  test('should have correct version', () => {
+    expect(coreUtils.version).toEqual('1.0.0');
   });
 });
