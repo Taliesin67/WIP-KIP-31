@@ -1,35 +1,24 @@
-module.exports = {
-  // Root directory for tests
-  rootDir: '.',
-  
-  // File extensions to test
-  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
-  
-  // Test match patterns
-  testMatch: [
-    '**/__tests__/**/*.[jt]s?(x)',
-    '**/?(*.)+(spec|test).[tj]s?(x)'
-  ],
-  
-  // Test environment
+/** @type {import('jest').Config} */
+export default {
   testEnvironment: 'node',
-  
-  // Coverage configuration
+  transform: {},
+  extensionsToTreatAsEsm: ['.js'],
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1'
+  },
   collectCoverage: true,
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov'],
   coverageThreshold: {
     global: {
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100
     }
   },
-  
-  // Ignore specific paths
-  testPathIgnorePatterns: ['/node_modules/', '/dist/'],
-  
-  // Verbose reporting
-  verbose: true
+  testMatch: [
+    '**/__tests__/**/*.[jt]s',
+    '**/?(*.)+(spec|test).[jt]s'
+  ]
 };
