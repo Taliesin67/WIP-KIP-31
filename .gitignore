@@ -4,3 +4,4 @@ coverage/
 .jest-cache/
 *.log
 .env
+*.tsbuildinfo
