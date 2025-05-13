@@ -1,4 +1,4 @@
-const CoreUtils = require('../src/core-utils');
+import { CoreUtils } from '../src/core-utils.js';
 
 describe('CoreUtils', () => {
   describe('safeAdd', () => {
