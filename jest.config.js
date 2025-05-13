@@ -1,4 +1,3 @@
-/** @type {import('jest').Config} */
 export default {
   // Indicates that tests are in the 'tests' directory
   testMatch: ['**/tests/**/*.test.js'],
@@ -20,7 +19,11 @@ export default {
   ],
   
   // Transform settings for ES modules
-  transform: {},
+  transform: {
+    '^.+\\.js$': 'babel-jest'
+  },
+  
+  // Treat .js files as ES modules
   extensionsToTreatAsEsm: ['.js'],
   
   // Other configurations
