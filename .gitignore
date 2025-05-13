@@ -1,3 +1,4 @@
+# Previous .gitignore content
 # Python virtual environments
 venv/
 env/
@@ -13,7 +14,7 @@ __pycache__/
 *.egg
 
 # KNO SDK
-# .kno/ - Uncommenting this line to include the .kno directory in version control
+.kno/
 
 # IDE files
 .idea/
@@ -40,3 +41,7 @@ test/data/
 logs/
 /data/
 /tmp/
+
+# Jest specific
+/coverage/
+node_modules/
