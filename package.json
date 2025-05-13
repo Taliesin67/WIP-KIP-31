@@ -4,24 +4,41 @@
   "description": "Core modules testing framework",
   "type": "module",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
-    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
+    "test:coverage": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage"
   },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": ["testing", "jest", "kip-31"],
+  "license": "MIT",
   "devDependencies": {
     "jest": "^29.7.0",
-    "@types/jest": "^29.5.11"
+    "@types/jest": "^29.5.11",
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.7"
   },
   "jest": {
-    "transform": {},
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!your-module-to-transform)/"
+    ],
     "testEnvironment": "node",
     "extensionsToTreatAsEsm": [".js"],
     "moduleNameMapper": {
       "^(\\.{1,2}/.*)\\.js$": "$1"
-    },
-    "coverageDirectory": "./coverage",
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
+    }
+  },
+  "babel": {
+    "presets": [
+      ["@babel/preset-env", {
+        "targets": {
+          "node": "current"
+        }
+      }]
     ]
   }
 }
