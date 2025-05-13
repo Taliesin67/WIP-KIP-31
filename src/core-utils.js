@@ -1,7 +1,7 @@
 /**
  * Core utility functions for the KIP-31 project
  */
-class CoreUtils {
+export class CoreUtils {
   /**
    * Safely adds two numbers
    * @param {number} a - First number
@@ -29,5 +29,3 @@ class CoreUtils {
     return value >= min && value <= max;
   }
 }
-
-module.exports = CoreUtils;
