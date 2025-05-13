@@ -1,15 +1,9 @@
 export default {
-  // Test environment setup
+  // Basic configuration
   testEnvironment: 'node',
+  verbose: true,
   
-  // ESM support
-  transform: {},
-  extensionsToTreatAsEsm: ['.js'],
-  moduleNameMapper: {
-    '^(\\.{1,2}/.*)\\.js$': '$1'
-  },
-  
-  // Coverage configuration
+  // Coverage settings
   collectCoverage: true,
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov'],
@@ -24,18 +18,23 @@ export default {
     }
   },
   
-  // Test match patterns
+  // Test file patterns
   testMatch: [
     '**/__tests__/**/*.[jt]s?(x)',
     '**/?(*.)+(spec|test).[tj]s?(x)'
   ],
   
-  // Ignore specific paths
+  // Transform configuration
+  transform: {
+    '^.+\\.js$': 'babel-jest'
+  },
+  
+  // Ignore patterns
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/'
   ],
   
-  // Verbose reporting
-  verbose: true
+  // Module resolution
+  moduleFileExtensions: ['js', 'mjs', 'cjs', 'json', 'node']
 };
