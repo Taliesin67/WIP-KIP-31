@@ -3,14 +3,20 @@
 ## Overview
 This directory contains Jest testing infrastructure for the KIP-31 project's core modules.
 
+## Prerequisites
+- Node.js 16.0.0 or higher
+- npm or yarn
+
+## Setup
+1. Install dependencies:
+   ```
+   npm install
+   ```
+
 ## Running Tests
 - Run all tests: `npm test`
 - Watch mode: `npm run test:watch`
 - Generate coverage report: `npm run test:coverage`
-
-## Test Structure
-- Tests are organized to match the source code structure
-- Each module has a corresponding test file in this directory
 
 ## Testing Guidelines
 - Write clear, descriptive test cases
@@ -20,4 +26,10 @@ This directory contains Jest testing infrastructure for the KIP-31 project's cor
 
 ## Dependencies
 - Jest: Primary testing framework
-- @types/jest: TypeScript type definitions for Jest
+- Babel: Enable modern JavaScript features
+- @types/jest: TypeScript type definitions
+
+## Troubleshooting
+- Ensure all dependencies are installed
+- Check Node.js version compatibility
+- Verify Jest configuration in `jest.config.js`
