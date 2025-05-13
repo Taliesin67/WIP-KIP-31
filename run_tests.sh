@@ -1,27 +1,32 @@
 #!/bin/bash
 set -e
 
-# Simple mock testing approach
-echo "Running Jest Tests Manually"
+# Ensure we're in the right directory
+cd "$(dirname "$0")"
 
-# Basic test function
-run_test() {
-    local test_name="$1"
-    local test_result="$2"
-    
-    if [ "$test_result" = "pass" ]; then
-        echo "✅ PASS: $test_name"
-    else
-        echo "❌ FAIL: $test_name"
-        exit 1
-    fi
-}
+# Check if Node.js and npm are installed
+if ! command -v node &> /dev/null; then
+    echo "❌ Node.js is not installed. Please install Node.js and npm."
+    exit 1
+fi
 
-# Simulate test scenarios
-run_test "Basic Test Setup" "pass"
-run_test "Simple Arithmetic" "pass"
-run_test "Object Comparison" "pass"
-run_test "Error Handling" "pass"
+# Check if Jest is installed
+if ! npm list jest &> /dev/null; then
+    echo "🔄 Installing Jest and dependencies..."
+    npm install
+fi
 
-echo "All tests passed successfully! 🎉"
-exit 0
+# Run tests with coverage
+echo "🧪 Running Jest Tests..."
+npm test
+
+# Check test exit code
+test_result=$?
+
+if [ $test_result -eq 0 ]; then
+    echo "✅ All tests passed successfully!"
+else
+    echo "❌ Some tests failed. Please review the test output."
+fi
+
+exit $test_result
