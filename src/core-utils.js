@@ -1,7 +1,7 @@
 /**
  * Core utility functions for KIP-31 project
  */
-class CoreUtils {
+export class CoreUtils {
   /**
    * Safely add two numbers with error handling
    * @param {number} a First number
@@ -25,5 +25,3 @@ class CoreUtils {
     return typeof email === 'string' && emailRegex.test(email);
   }
 }
-
-module.exports = CoreUtils;
