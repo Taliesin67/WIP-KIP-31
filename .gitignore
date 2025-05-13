@@ -1,4 +1,29 @@
-# Previous .gitignore content
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# Jest
+/coverage
+.jest
+
+# Existing .gitignore content
 # Python virtual environments
 venv/
 env/
@@ -41,7 +66,3 @@ test/data/
 logs/
 /data/
 /tmp/
-
-# Jest specific
-/coverage/
-node_modules/
