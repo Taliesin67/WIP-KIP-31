@@ -1,18 +1,24 @@
 {
-  "name": "kip-31-testing",
+  "name": "kip-31-core-tests",
   "version": "1.0.0",
-  "description": "Jest Testing Framework for KIP-31",
-  "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "test:verbose": "jest --verbose"
+  "description": "Core Module Testing Framework",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   },
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": ["testing", "jest", "kip-31"],
+  "author": "KIP-31 Team",
+  "license": "MIT",
   "devDependencies": {
     "jest": "^29.7.0",
     "@types/jest": "^29.5.11",
-    "ts-jest": "^29.1.1",
-    "@types/node": "^20.10.5"
+    "ts-jest": "^29.1.1"
   },
   "jest": {
     "preset": "ts-jest",
