@@ -1,4 +1,4 @@
-const TestUtils = require('../testUtils');
+import { TestUtils } from '../testUtils.js';
 
 describe('TestUtils', () => {
   describe('createMock', () => {
