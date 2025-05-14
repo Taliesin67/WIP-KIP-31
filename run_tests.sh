@@ -1,2 +1,2 @@
 #!/bin/bash
-npx jest tests
+node --experimental-vm-modules node_modules/jest/bin/jest.js tests
