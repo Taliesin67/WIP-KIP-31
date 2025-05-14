@@ -2,10 +2,25 @@
   "name": "kip-31-core-modules",
   "version": "1.0.0",
   "description": "Core modules testing framework",
-  "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true,
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   },
   "devDependencies": {
     "jest": "^29.7.0"
