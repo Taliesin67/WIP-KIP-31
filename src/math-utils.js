@@ -1,7 +1,7 @@
 /**
  * Utility functions for mathematical operations
  */
-export class MathUtils {
+class MathUtils {
   /**
    * Add two numbers
    * @param {number} a - First number
@@ -31,3 +31,5 @@ export class MathUtils {
     return a / b;
   }
 }
+
+module.exports = { MathUtils };
