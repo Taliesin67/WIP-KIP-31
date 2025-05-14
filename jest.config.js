@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // Indicates that we'll be using ES modules
   moduleFileExtensions: ['js', 'mjs', 'cjs', 'jsx', 'ts', 'tsx', 'json'],
   
@@ -17,21 +17,29 @@ module.exports = {
   coverageReporters: ['text', 'lcov'],
   coverageThreshold: {
     global: {
-      branches: 70,
-      functions: 70,
-      lines: 70,
-      statements: 70
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80
     }
   },
   
-  // Transform files (if using TypeScript or modern JS)
+  // Transform files
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest'
+    '^.+\\.js$': 'babel-jest'
   },
   
   // Ignore specific paths
   testPathIgnorePatterns: ['/node_modules/'],
   
   // Verbose output
-  verbose: true
+  verbose: true,
+
+  // Use ES modules
+  extensionsToTreatAsEsm: ['.js'],
+  
+  // Module name mapper (if needed)
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1'
+  }
 };
