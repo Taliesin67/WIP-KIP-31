@@ -1,4 +1,4 @@
-import { MathUtils } from '../src/math-utils.js';
+const { MathUtils } = require('../src/math-utils');
 
 describe('MathUtils', () => {
   describe('add', () => {
