@@ -1,42 +1,7 @@
-# Python virtual environments
-venv/
-env/
-.env/
-.venv/
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-*.egg-info/
-.installed.cfg
-*.egg
-
-# KNO SDK
-# .kno/ - Uncommenting this line to include the .kno directory in version control
-
-# IDE files
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# OS specific files
-.DS_Store
-Thumbs.db
-
-# Build and distribution
-build/
+node_modules/
 dist/
-target/
-
-# Bitcoin related
-*.dat
-*.bin
-test/data/
-
-# Logs and temporary files
+coverage/
+.jest-cache/
 *.log
-logs/
-/data/
-/tmp/
+.env
+.DS_Store
