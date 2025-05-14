@@ -19,10 +19,19 @@ module.exports = {
   // Minimum coverage thresholds
   coverageThreshold: {
     global: {
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100
     }
-  }
+  },
+
+  // Verbose output
+  verbose: true,
+
+  // Clear mocks before each test
+  clearMocks: true,
+
+  // Automatically reset mocks before each test
+  resetMocks: true
 };
