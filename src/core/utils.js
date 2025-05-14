@@ -8,6 +8,9 @@ class CoreUtils {
    * @returns {object|null} Parsed object or null if parsing fails
    */
   static safeJsonParse(jsonString) {
+    if (typeof jsonString !== 'string') {
+      return null;
+    }
     try {
       return JSON.parse(jsonString);
     } catch (error) {
@@ -25,3 +28,5 @@ class CoreUtils {
     return typeof value === 'number' && value > 0;
   }
 }
+
+module.exports = CoreUtils;
