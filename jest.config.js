@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('jest').Config} */
+export default {
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
 
@@ -11,9 +12,17 @@ module.exports = {
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: 'v8',
 
-  // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
+  // Enable ESM support
+  extensionsToTreatAsEsm: ['.js'],
+  
+  // Transform configuration for ESM
+  transform: {
+    '^.+\\.js$': 'babel-jest',
+  },
+
+  // Module name mapper for ESM
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1'
+    '^(\\.{1,2}/.*)\\.js$': '$1'
   },
 
   // The test environment that will be used for testing
