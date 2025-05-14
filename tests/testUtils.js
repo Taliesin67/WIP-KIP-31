@@ -1,7 +1,7 @@
 /**
  * Test utility functions for consistent test setup and helper methods
  */
-class TestUtils {
+export class TestUtils {
   /**
    * Create a mock for testing
    * @param {Object} overrides - Optional properties to override
@@ -43,5 +43,3 @@ class TestUtils {
     });
   }
 }
-
-module.exports = TestUtils;
