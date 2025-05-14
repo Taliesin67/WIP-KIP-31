@@ -11,6 +11,11 @@ describe('CoreUtils', () => {
       const invalidJson = '{invalid json}';
       expect(CoreUtils.safeJsonParse(invalidJson)).toBeNull();
     });
+
+    test('returns null for non-string input', () => {
+      expect(CoreUtils.safeJsonParse(123)).toBeNull();
+      expect(CoreUtils.safeJsonParse(null)).toBeNull();
+    });
   });
 
   describe('isPositiveNumber', () => {
