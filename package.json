@@ -1,0 +1,22 @@
+{
+  "name": "kip-31-core-modules",
+  "version": "1.0.0",
+  "description": "Core modules testing framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+    "test:watch": "jest --watch"
+  },
+  "keywords": ["testing", "jest", "modules"],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.11"
+  },
+  "jest": {
+    "transform": {},
+    "testEnvironment": "node"
+  }
+}
