@@ -1,4 +1,11 @@
 flask==3.1.0
 prometheus-client==0.21.1
 psutil==7.0.0
-requests==2.32.3 
+requests==2.32.3
+
+# JavaScript Testing Dependencies
+# Use this as a guide for manual npm/yarn install
+jest==29.7.0
+ts-jest==29.1.2
+typescript==5.3.3
+@types/jest==29.5.12
